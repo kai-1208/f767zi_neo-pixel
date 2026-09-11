@@ -18,7 +18,7 @@ void WS2812B_Init(TIM_HandleTypeDef *htim, uint32_t channel) {
     ws_htim = htim;
     ws_channel = channel;
 
-    __HAL_TIM_MOE_ENABLE(ws_htim);
+    __HAL_TIM_MOE_ENABLE(ws_htim); // 高級タイマーであれば必要、TIM2なら不要
 
     // 初期状態のトークンを取得して、最初の送信を開始可能にする
     if (ws2812bSemHandle != NULL) {

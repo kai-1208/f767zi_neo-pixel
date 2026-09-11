@@ -32,11 +32,11 @@ extern "C" void StartNeoPixelTask(void *argument)
 {
     // NeoPixelの初期化（TIM1 Channel 3）
     WS2812B_Init(&htim1, TIM_CHANNEL_3);
-
+    
     for(;;)
     {
-        // 全LEDを白色に設定
-        WS2812B_SetAll(255, 255, 255);
+        // 全LEDに設定
+        WS2812B_SetAll(0, 127, 0);
         WS2812B_Update();
         osDelay(30);
     }
