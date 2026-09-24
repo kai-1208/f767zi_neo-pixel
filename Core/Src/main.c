@@ -100,6 +100,7 @@ int main(void)
   MX_ETH_Init();
   MX_USART3_UART_Init();
   MX_TIM1_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */

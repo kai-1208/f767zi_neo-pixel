@@ -3,7 +3,7 @@
 #include "neo-pixel.h"
 
 // 使用するタイマー（CubeMXが生成したもの）
-extern TIM_HandleTypeDef htim1;
+extern TIM_HandleTypeDef htim2;
 
 // 色生成ヘルパークラス例（C++の機能を利用）
 class ColorWheel {
@@ -37,8 +37,8 @@ extern "C" void NeoPixel_SetSystemState(LedSystemState_t new_state) {
 // C言語側から呼び出すため extern "C" を付与
 extern "C" void StartNeoPixelTask(void *argument)
 {
-    // NeoPixelの初期化（TIM1 Channel 3）
-    WS2812B_Init(&htim1, TIM_CHANNEL_3);
+    // NeoPixelの初期化（TIM2 Channel 1）
+    WS2812B_Init(&htim2, TIM_CHANNEL_1);
 
     bool blink_flag = false;
     

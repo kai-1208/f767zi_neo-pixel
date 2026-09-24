@@ -12,8 +12,8 @@ extern "C" {
 #define NUM_LEDS 15
 
 // タイマークロック216MHz、ARR=269におけるデューティ設定
-#define PWM_HI 180
-#define PWM_LO 90
+#define PWM_HI 90
+#define PWM_LO 45
 
 // システム状態のネオピク表示定義
 typedef enum {
